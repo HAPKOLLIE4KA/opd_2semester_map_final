@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styleInfoMenu.css">  
+    <title>Карта</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=04b5efc7-5ce5-4258-9de0-c473764118a1&lang=ru_RU" type="text/javascript"> </script>
+    <script>
+        var myMap
+        ymaps.ready(init);
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [56.473936, 84.949873],
+                        zoom: 15
+                    },
+                    {
+                        restrictMapArea: [
+                            [56.696908, 84.632895],
+                            [56.322786, 85.269268]
+                        ]
+                    },)  
+                }   
+ </script>
+</head>
+
+<body>
+    
+    <div class="row-header-icon">
+        <div class = "header-item">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="block">
+
+        <div class="menu">
+            <script src="dist/mapLogic.js"></script>
+            <hr/>
+            
+                <p class="header-text-menu">
+                    ПУТЕШЕСТВИЕ ПО ГОРОДУ
+                </p>
+            
+            
+            <div class="container-text">
+                <span class="switch-text-menu" id="Памятник">
+                    Памятники
+                </span>
+            </div>
+               
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Архитектура">
+                        Деревянные дома
+                    </span>
+                </div>
+
+                <hr/>
+
+                <p class="header-text-menu">
+                    ТУСУР
+                </p>
+                
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Корпус">
+                        Корпуса ТУСУРа
+                    </span>
+                </div>
+                
+                <div class="container-text">    
+                    <span class="switch-text-menu" id="Общежитие">
+                        Общежития
+                    </span>
+                </div>
+
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Студенческие отряды">
+                        Студ отряды
+                    </span>    
+                </div>
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Клуб по интересам">
+                        По интересам
+                    </span>    
+                </div>
+
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Спортивный клуб">
+                       Спорт клубы
+                    </span>    
+                </div>
+                
+                <hr/>
+            
+            
+                <p class="header-text-menu">
+                ВКУСНО ПОКУШАТЬ
+                </p>
+           
+                
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Около общежитий">
+                    Возле общежитий
+                    </span>
+                </div>
+               
+                <div class="container-text">
+                    <span class="switch-text-menu" id="Около корпусов">
+                     Возле корпусов
+                    </span>
+                </div>
+                <hr/>
+                
+                    <p class="header-text-menu">
+                        ОТДЫХ
+                   </p>
+               
+            
+            <div class="container-text">
+                <spap class="switch-text-menu" id="Парк">
+                    Парки
+                </span>
+            </div>
+            <div class="container-text">
+                <spap class="switch-text-menu" id="Кинотеатр">
+                    Кинотеатры
+                </span>
+            </div>
+            <div class="container-text">
+                <spap class="switch-text-menu" id="Музей">
+                    Музеи
+                </span>
+            </div>
+                
+                <hr/>
+        </div>
+
+        <div class="menu information-block">
+            <div class="row-header-icon">
+                <span class = "header-text-menu">Информация об объекте</span> 
+               <div class="close">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAAAZElEQVQokc2RwQmAQAwER7ALrc48xCbsREHrFPQTQTiWeHmI88kjOySXgz8wAxZkzHMFA3AAkxCjvgyEogq+Fm/Mhd1rdIuCDTi9VpGenH5z+trV/9w+mj0wAouQV6ABOr34V1xnuyH2+DaAVAAAAABJRU5ErkJggg=="/>
+               </div> 
+            </div>
+            
+            <div class="block-info">
+                
+            </div>
+            
+        </div>
+
+        <div class="map" id="map">  
+            
+            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1eb8ee324e4d1111772a5637246f32f323c87477b0547ec27359bcdaafc7f845&amp;width=600&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script> -->
+        </div>
+    </div>
+    
+    
+    <script src="modules/selectorsAndColor.js"></script>
+    <script src="design.js"></script>
+    
+</body>
+</html>

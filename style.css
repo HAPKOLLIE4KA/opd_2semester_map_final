@@ -1,0 +1,169 @@
+.row-header-icon {
+    margin: 12px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.header-item{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu  {
+    width: 320px; 
+    height: 600px;
+    margin: 35px;
+    margin-left: 270px;
+    box-shadow: 0px 7px 30px silver;
+    border-radius: 17px;
+    overflow-y:scroll;
+}
+
+
+.map {
+    width: 600px;
+    height: 600px;
+    margin: 35px;
+    margin-left: 130px;
+    padding: 10px;  
+}
+
+.header-text-menu {
+    height: 17px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Verdana;
+    color: rgb(32, 29, 29);
+}
+
+
+
+.switch-text-menu{
+  
+    user-select: none;
+    width: 180px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Verdana;
+    font-weight: 300;
+    cursor: pointer; 
+    
+}
+
+button{
+    background: white;
+    outline: none;
+    border: none;
+    height: 5px;
+}
+
+.container-text{
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  height: 34px;
+  width: 290px;
+}
+
+hr {
+   border: none;
+   height: 0.5px;
+   background-color: gray;
+}
+
+
+
+.switch { /*сам ползуночек*/
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 13px;
+  }
+  .switch input {display:none;}
+
+
+  /* цвет поля до передвижения ползунка */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(18, 18, 20);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* цвет ползунка перед анимацией */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 9px;
+    width: 9px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  /*цвет поля после передвижения ползунка*/
+  input:checked + .slider {
+    background-color: rgb(53, 52, 54);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(18, 18, 20);
+  }
+  /* цвет ползунка после передвижения + анимация передвижения*/
+  input:checked + .slider:before {
+    background-color:rgb(18, 18, 20);
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+ 
+
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+@media screen and (max-device-width: 480px) {
+  .map {
+    width: 378px;
+    height: 600px;
+    margin: 35px;
+    margin-left: -24px;
+    padding: 10px;
+}
+
+.menu {
+  width: 320px;
+  height: 600px;
+  margin: 35px;
+  margin-left: 33px;
+  box-shadow: 0px 7px 30px silver;
+  border-radius: 17px;
+  overflow-y: scroll;
+}
+
+
+}
